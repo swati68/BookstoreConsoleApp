@@ -85,24 +85,27 @@ public class UserModule {
 		int ch1;
 		
 		System.out.println();
-		System.out.println("Select an Action---->");
-		System.out.println("1. Order a Book");
-		System.out.println("2. Add to Cart");
-		System.out.println("3. Go Back");
+		do {
+			System.out.println("Select an Action---->");
+			System.out.println("1. Order a Book");
+			System.out.println("2. Add to Cart");
+			System.out.println("3. Go Back");
+			
+			System.out.print("Your Choice: ");
+			ch1 = sc.nextInt();
+			
+			if(ch1==1) {
+				System.out.print("Enter the book id to order:");
+				int bid = sc.nextInt();
+				orderBook(bid);
+			}
+			else if(ch1==2) {
+				System.out.print("Enter the book id to Add to cart:");
+				int bid = sc.nextInt();
+				addCart(bid);
+			}
+		}while(ch1!=3);
 		
-		System.out.print("Your Choice: ");
-		ch1 = sc.nextInt();
-		
-		if(ch1==1) {
-			System.out.print("Enter the book id to order:");
-			int bid = sc.nextInt();
-			orderBook(bid);
-		}
-		else if(ch1==2) {
-			System.out.print("Enter the book id to Add to cart:");
-			int bid = sc.nextInt();
-			addCart(bid);
-		}
 	}
 	
 	private void addCart(int bid) throws SQLException {
@@ -174,22 +177,22 @@ public class UserModule {
 				System.out.println(rs.getInt(1)+") "+rs.getString(2)+" , "+rs1.getString(2)+" , "+rs2.getString(2)+" , "+rs.getInt(5)+" , "+rs.getInt(6));
 			
 			int ch1;
+				System.out.println();
+				System.out.println("Select an Action-->");
+				System.out.println("1. Order a Book");
+				System.out.println("2. Add to Cart");
+				System.out.println("3. Go Back");
+				
+				System.out.print("Your Choice: ");
+				ch1 = sc.nextInt();
+				
+				if(ch1==1) {
+					orderBook(rs.getInt(1));
+				}
+				else if(ch1==2) {
+					addCart(rs.getInt(1));
+				}
 			
-			System.out.println();
-			System.out.println("Select an Action-->");
-			System.out.println("1. Order a Book");
-			System.out.println("2. Add to Cart");
-			System.out.println("3. Go Back");
-			
-			System.out.print("Your Choice: ");
-			ch1 = sc.nextInt();
-			
-			if(ch1==1) {
-				orderBook(rs.getInt(1));
-			}
-			else if(ch1==2) {
-				addCart(rs.getInt(1));
-			}
 			
 		}else {
 			System.out.println("No books available by the name "+book);
@@ -214,28 +217,30 @@ public class UserModule {
 				ResultSet rs3 = stmt3.executeQuery();
 				if(rs3.next())
 					System.out.println(rs2.getInt(1)+") "+rs2.getString(2)+" , "+rs.getString(2)+" , "+rs3.getString(2)+" , "+rs2.getInt(5)+" , "+rs2.getInt(6));
-				int ch1;
-				
-				System.out.println();
-				System.out.println("Select an Action-->");
-				System.out.println("1. Order a Book");
-				System.out.println("2. Add to Cart");
-				System.out.println("3. Go Back");
-				
-				System.out.print("Your Choice: ");
-				ch1 = sc.nextInt();
-				
-				if(ch1==1) {
-					System.out.print("Enter the book id to order:");
-					int bid = sc.nextInt();
-					orderBook(bid);
-				}
-				else if(ch1==2) {
-					System.out.print("Enter the book id to add to cart:");
-					int bid = sc.nextInt();
-					addCart(bid);
-				}
 			}
+				int ch1;
+				do {
+					System.out.println();
+					System.out.println("Select an Action-->");
+					System.out.println("1. Order a Book");
+					System.out.println("2. Add to Cart");
+					System.out.println("3. Go Back");
+					
+					System.out.print("Your Choice: ");
+					ch1 = sc.nextInt();
+					
+					if(ch1==1) {
+						System.out.print("Enter the book id to order:");
+						int bid = sc.nextInt();
+						orderBook(bid);
+					}
+					else if(ch1==2) {
+						System.out.print("Enter the book id to add to cart:");
+						int bid = sc.nextInt();
+						addCart(bid);
+					}
+				}while(ch1!=3);
+				
 		}else {
 			System.out.println("No books available by the author "+auth);
 		}
@@ -258,29 +263,29 @@ public class UserModule {
 				ResultSet rs3 = stmt3.executeQuery();
 				if(rs3.next())
 					System.out.println(rs2.getInt(1)+") "+rs2.getString(2)+" , "+rs3.getString(2)+" , "+rs.getString(2)+" , "+rs2.getInt(5)+" , "+rs2.getInt(6));
-				
-				int ch1;
-				
-				System.out.println();
-				System.out.println("Select an Action-->");
-				System.out.println("1. Order a Book");
-				System.out.println("2. Add to Cart");
-				System.out.println("3. Go Back");
-				
-				System.out.print("Your Choice: ");
-				ch1 = sc.nextInt();
-				
-				if(ch1==1) {
-					System.out.print("Enter the book id to order:");
-					int bid = sc.nextInt();
-					orderBook(bid);
-				}
-				else if(ch1==2) {
-					System.out.print("Enter the book id to add to cart:");
-					int bid = sc.nextInt();
-					addCart(bid);
-				}
 			}
+				int ch1;
+				do {
+					System.out.println();
+					System.out.println("Select an Action-->");
+					System.out.println("1. Order a Book");
+					System.out.println("2. Add to Cart");
+					System.out.println("3. Go Back");
+					
+					System.out.print("Your Choice: ");
+					ch1 = sc.nextInt();
+					
+					if(ch1==1) {
+						System.out.print("Enter the book id to order:");
+						int bid = sc.nextInt();
+						orderBook(bid);
+					}
+					else if(ch1==2) {
+						System.out.print("Enter the book id to add to cart:");
+						int bid = sc.nextInt();
+						addCart(bid);
+					}
+				}while(ch1!=3);
 		}else {
 			System.out.println("No books available by the genre "+gen);
 		}
@@ -291,51 +296,57 @@ public class UserModule {
 		stmt.setInt(1, id);
 		ResultSet rs = stmt.executeQuery();
 		int i=1;
-		while(rs.next()) {
-			PreparedStatement stmt2 = conn.prepareStatement("Select * from book_info where id=?");
-			stmt2.setInt(1, rs.getInt(3));
-			ResultSet rs2 = stmt2.executeQuery();
-			
-			if(rs2.next()) {
-				PreparedStatement stmt3 = conn.prepareStatement("Select * from author_info where id=?");
-				stmt3.setInt(1, rs2.getInt(3));
-				ResultSet rs3 = stmt3.executeQuery();
+		if(rs.next()) {
+			System.out.println("S.No.  ||  ID   ||  Book Name  ||   Author Name    ||   Genre Type   ||  Price   ||   Date    ||   Status");
+			while(rs.next()) {
+				PreparedStatement stmt2 = conn.prepareStatement("Select * from book_info where id=?");
+				stmt2.setInt(1, rs.getInt(3));
+				ResultSet rs2 = stmt2.executeQuery();
 				
-				PreparedStatement stmt4 = conn.prepareStatement("Select * from genre_info where id=?");
-				stmt4.setInt(1, rs2.getInt(4));
-				ResultSet rs4 = stmt4.executeQuery();
-				
-				if(rs3.next() && rs4.next()) {
-					String status;
-					if(rs.getInt(5)==0) {
-						status = "Yet to be Delivered";
+				if(rs2.next()) {
+					PreparedStatement stmt3 = conn.prepareStatement("Select * from author_info where id=?");
+					stmt3.setInt(1, rs2.getInt(3));
+					ResultSet rs3 = stmt3.executeQuery();
+					
+					PreparedStatement stmt4 = conn.prepareStatement("Select * from genre_info where id=?");
+					stmt4.setInt(1, rs2.getInt(4));
+					ResultSet rs4 = stmt4.executeQuery();
+					
+					if(rs3.next() && rs4.next()) {
+						String status;
+						if(rs.getInt(5)==0) {
+							status = "Yet to be Delivered";
+						}
+						else if(rs.getInt(5)==1){
+							status = "Delivered";
+						}
+						else {
+							status="Order cancelled";
+						}
+						System.out.println(i+") "+rs.getInt(1)+" , "+rs2.getString(2)+" , "+rs3.getString(2)+" , "+rs4.getString(2)+" , "+rs2.getInt(5)+" , "+rs.getDate(4)+" , "+status);
 					}
-					else if(rs.getInt(5)==1){
-						status = "Delivered";
-					}
-					else {
-						status="Order cancelled";
-					}
-					System.out.println(i+") "+rs.getInt(1)+" , "+rs2.getString(2)+" , "+rs3.getString(2)+" , "+rs4.getString(2)+" , "+rs2.getInt(5)+" , "+rs.getDate(4)+" , "+status);
 				}
+				i++;
 			}
-			i++;
+			System.out.println();
+			int ch1;
+			do {
+				System.out.println("Select an Action-->");
+				System.out.println("1. Cancel Orders");
+				System.out.println("2. Go Back");
+				System.out.print("Your Choice:");
+				ch1 = sc.nextInt();
+				
+				if(ch1==1) {
+					System.out.println("Enter the order ID to cancel order:");
+					int oid = sc.nextInt();
+					cancelOrders(oid);
+				}
+			}while(ch1!=2);
 		}
-		System.out.println();
-		int ch1;
-		do {
-			System.out.println("Select an Action-->");
-			System.out.println("1. Cancel Orders");
-			System.out.println("2. Go Back");
-			System.out.print("Your Choice:");
-			ch1 = sc.nextInt();
-			
-			if(ch1==1) {
-				System.out.println("Enter the order ID to cancel order:");
-				int oid = sc.nextInt();
-				cancelOrders(oid);
-			}
-		}while(ch1!=2);
+		else {
+			System.out.println("No orders placed yet. Kindly view books to start shopping");
+		}
 		
 		
 	}
@@ -359,33 +370,48 @@ public class UserModule {
 	}
 	
 	private void viewCart() throws SQLException {
-		PreparedStatement stmt = conn.prepareStatement("Select * from user_cart where user_id=?");
+		PreparedStatement stmt = conn.prepareStatement("Select * from user_cart where user_id=? and status=?");
 		stmt.setInt(1, id);
+		stmt.setInt(2, 0);		
 		ResultSet rs = stmt.executeQuery();
 		
-		System.out.println("S.No. ||   Book ID  ||   Book Name   ||  Price");
-		int i=1;
-		while(rs.next()) {
-			PreparedStatement stmt2 = conn.prepareStatement("Select * from book_info where id=?");
-			stmt2.setInt(1, rs.getInt(3));
-			ResultSet rs2 = stmt2.executeQuery();
-			if(rs2.next()) {
-				System.out.println(i+" , "+rs.getInt(3)+" , "+rs2.getString(2)+" , "+rs2.getInt(5));
+		if(rs.next()) {
+			System.out.println("S.No. ||   Book ID  ||   Book Name   ||  Price");
+			int i=1;
+			while(rs.next()) {
+				PreparedStatement stmt2 = conn.prepareStatement("Select * from book_info where id=?");
+				stmt2.setInt(1, rs.getInt(3));
+				ResultSet rs2 = stmt2.executeQuery();
+				if(rs2.next()) {
+					System.out.println(i+" , "+rs.getInt(3)+" , "+rs2.getString(2)+" , "+rs2.getInt(5));
+				}
+				i++;
 			}
-			i++;
+			int ch1;
+			do {
+				System.out.println();
+				System.out.println("Select an Action-->");
+				System.out.println("1. Place an Order");
+				System.out.println("2. Go Back");
+				System.out.print("Your Choice: ");
+				ch1 = sc.nextInt();
+				if(ch1==1) {
+					System.out.print("Enter the book id to order:");
+					int bid = sc.nextInt();
+					
+					PreparedStatement stmt3 = conn.prepareStatement("Update user_cart set status=? where user_id=? and book_id=?");
+					stmt3.setInt(1, 1);
+					stmt3.setInt(2, id);
+					stmt3.setInt(3, bid);
+					stmt3.execute();
+					orderBook(bid);
+				}
+			}while(ch1!=2);
+		}
+		else {
+			System.out.println("Cart is empty");
 		}
 		
-		System.out.println();
-		System.out.println("Select an Action-->");
-		System.out.println("1. Place an Order");
-		System.out.println("2. Go Back");
-		System.out.print("Your Choice: ");
-		int ch1 = sc.nextInt();
-		if(ch1==1) {
-			System.out.print("Enter the book id to order:");
-			int bid = sc.nextInt();
-			orderBook(bid);
-		}
 	}
 
 	public void functionality() throws SQLException{

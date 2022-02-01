@@ -1,0 +1,18 @@
+Database:-
+Login Table -->
+ID  |  First Name  | Last Name | Email | Password
+
+Book_info Table -->
+ID | Book Name | Author Id | Genre Id | Price | Quantity
+
+Author_info Table -->
+ID | Author Name
+
+Genre_info Table -->
+ID | Genre Type
+
+User_cart Table -->
+ID | User Id | Book Id | Status
+
+Order_detail Table -->
+ID | User_Id | Book_Id | Date | Status

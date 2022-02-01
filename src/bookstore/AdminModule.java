@@ -46,34 +46,36 @@ public class AdminModule {
 		}
 		
 		int ch1;
+		do {
+			System.out.println();
+			System.out.println("Select an Action-->");
+			System.out.println("1. Add a new book");
+			System.out.println("2. Delete a Book");
+			System.out.println("3. Alter Book Info");
+			System.out.println("4. Go Back");
+			
+			System.out.print("Your Choice: ");
+			ch1 = sc.nextInt();
+			
+			switch(ch1) {
+			case 1:
+				addBook();
+				break;
+			case 2:
+				System.out.print("Enter book id to delete:");
+				int bid = sc.nextInt();
+				deleteBook(bid);
+				break;
+			case 3:
+				System.out.print("Enter book id to alter info:");
+				int b = sc.nextInt();
+				alterBook(b);
+				break;
+			default:
+				break;
+			}
+		}while(ch1!=4);
 		
-		System.out.println();
-		System.out.println("Select an Action-->");
-		System.out.println("1. Add a new book");
-		System.out.println("2. Delete a Book");
-		System.out.println("3. Alter Book Info");
-		System.out.println("4. Go Back");
-		
-		System.out.print("Your Choice: ");
-		ch1 = sc.nextInt();
-		
-		switch(ch1) {
-		case 1:
-			addBook();
-			break;
-		case 2:
-			System.out.print("Enter book id to delete:");
-			int bid = sc.nextInt();
-			deleteBook(bid);
-			break;
-		case 3:
-			System.out.print("Enter book id to alter info:");
-			int b = sc.nextInt();
-			alterBook(b);
-			break;
-		default:
-			break;
-		}
 		
 	}
 	

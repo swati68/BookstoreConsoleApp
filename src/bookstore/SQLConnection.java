@@ -8,14 +8,10 @@ public class SQLConnection {
 	private static Connection conn;
 	
 	public static Connection getConnection() throws SQLException, ClassNotFoundException{
-		//try {
 			Class.forName("com.mysql.jdbc.Driver");
 			conn=DriverManager.getConnection("jdbc:mysql://localhost:3308/online_book","root","12345");
 			//System.out.println(conn);
 			return conn;
-//		}
-//		catch(Exception e) {
-//			e.printStackTrace();
-//		}
+
 	}
 }
