@@ -13,10 +13,10 @@ This project serves as a case study for building a command-line bookstore applic
 - Managing data storage via a simple database
 
 ##  Features of User ------
-  1) View all books in the repository
-      a) Order Book
-      b) Add to cart
-    	c) Go Back
+  1) View all books in the repository  
+      a) Order Book  
+      b) Add to cart  
+    	c) Go Back  
   3) Search book by Title
     	a) Order Book
     	b) Add to cart
