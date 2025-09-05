@@ -17,34 +17,34 @@ This project serves as a case study for building a command-line bookstore applic
       a) Order Book  
       b) Add to cart  
     	c) Go Back  
-  3) Search book by Title
-    	a) Order Book
-    	b) Add to cart
-    	c) Go Back
-  4) Search book by Author Name
-    	a) Order Book
-    	b) Add to cart
-    	c) Go Back
-  5) Search book by Genre Name
-    	a) Order Book
-    	b) Add to cart
-    	c) Go Back
-  6) View Orders
-    	a) Cancel Order
-    	b) Go Back
-  7) View Cart
-    	a) Order Book
-    	b) Go Back
-  8) Logout
+  2) Search book by Title  
+    	a) Order Book  
+    	b) Add to cart  
+    	c) Go Back  
+  3) Search book by Author Name  
+    	a) Order Book  
+    	b) Add to cart  
+    	c) Go Back  
+  4) Search book by Genre Name  
+    	a) Order Book  
+    	b) Add to cart  
+    	c) Go Back  
+  5) View Orders  
+    	a) Cancel Order  
+    	b) Go Back  
+  6) View Cart  
+    	a) Order Book  
+    	b) Go Back  
+  7) Logout  
 
 ##  Features of Admin --------
-  1) View All Books
-   	 a) Add a New Book
-  	 b) Delete a Book
-   	 c) Alter Book Details
-  2) View All Orders
-   	 a) Change Order Details
-  3) View All Customers
-   	 a) View Individual Customer's Orders
-  4) Logout
+  1) View All Books  
+   	 a) Add a New Book  
+  	 b) Delete a Book  
+   	 c) Alter Book Details  
+  2) View All Orders  
+   	 a) Change Order Details  
+  3) View All Customers  
+   	 a) View Individual Customer's Orders  
+  4) Logout  
      
